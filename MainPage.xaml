@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DoITApp"
+             x:Class="DoITApp.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="15" Padding="15">
+           
+            
+            <Frame BorderColor="Gray" Padding="10">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Dodaj nowy kontakt" 
+                           FontSize="20" 
+                           HorizontalOptions="Center"/>
+
+                    <Entry Placeholder="Nazwisko"
+                           Text="{Binding LastName}"/>
+
+                    <Entry Placeholder="Telefon"
+                           Text="{Binding PhoneNumber}"
+                           Keyboard="Telephone"/>
+
+                    <Entry Placeholder="Email"
+                           Text="{Binding Email}"
+                           Keyboard="Email"/>
+
+                    <Button Text="Dodaj kontakt"
+                            Command="{Binding AddContactCommand}"
+                            BackgroundColor="DodgerBlue"
+                            TextColor="White"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            
+            <Label Text="Lista kontaktów" 
+                   FontSize="20" 
+                   HorizontalOptions="Center"/>
+
+            <CollectionView ItemsSource="{Binding Contacts}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BorderColor="LightGray" 
+                               Margin="0,5" 
+                               Padding="10">
+                            <Grid ColumnDefinitions="*, Auto">
+                                <VerticalStackLayout Grid.Column="0">
+                                    <Label Text="{Binding LastName}" 
+                                           FontSize="18"/>
+                                    <Label Text="{Binding PhoneNumber}" 
+                                           TextColor="Gray"/>
+                                    <Label Text="{Binding Email}" 
+                                           TextColor="Gray"/>
+                                </VerticalStackLayout>
+
+                                <Button Grid.Column="1"
+                                        Text="Usuń"
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type local:MainPage}}, Path=BindingContext.DeleteContactCommand}"
+                                        CommandParameter="{Binding Id}"
+                                        BackgroundColor="Red"
+                                        TextColor="White"
+                                        HeightRequest="40"
+                                        WidthRequest="60"/>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "876727971164",
+    "firebase_url": "https://doit-ffa71-default-rtdb.firebaseio.com",
+    "project_id": "doit-ffa71",
+    "storage_bucket": "doit-ffa71.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:876727971164:android:8756de6986f2c663e42599",
+        "android_client_info": {
+          "package_name": "com.companyname.doitapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjn1R8LyIsQ9Rx-7GCDeQm9s64BGjTPmw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
