@@ -1,14 +1,14 @@
 {
   "project_info": {
-    "project_number": "876727971164",
-    "firebase_url": "https://doit-ffa71-default-rtdb.firebaseio.com",
+    "project_number": "Project-Number",
+    "firebase_url": "Firebase",
     "project_id": "doit-ffa71",
-    "storage_bucket": "doit-ffa71.firebasestorage.app"
+    "storage_bucket": "dFirebase-App"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:876727971164:android:8756de6986f2c663e42599",
+        "mobilesdk_app_id": "ID-Number",
         "android_client_info": {
           "package_name": "com.companyname.doitapp"
         }
